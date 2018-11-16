@@ -1,0 +1,20 @@
+{
+    "artboards": [
+        "/src/screens/Splash.js",
+        "/src/screens/Swipe.js",
+        "/src/screens/Chats.js",
+        "/src/screens/Untitled.js"
+    ],
+    "symbols": [],
+    "assets": [],
+    "defaultArtboardDirectory": "/src/screens",
+    "defaultSymbolDirectory": "/src/symbols",
+    "defaultAssetDirectory": "/src/assets",
+    "deviceName": "OnePlus 5T",
+    "deviceOrientation": "portrait",
+    "basePath": "/Users/hello/Documents/github/cuffed",
+    "tempPath": "/var/folders/mx/6x1yjh6j2bb9lfpdx8zs5wrm0000gn/T/Builders5TEHQG",
+    "useStylesheet": true,
+    "rulers": {},
+    "missingFonts": []
+}
