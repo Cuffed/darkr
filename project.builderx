@@ -3,7 +3,8 @@
         "/src/screens/Landing.js",
         "/src/screens/OnboardingGender.js",
         "/src/screens/OnboardingGenderPref.js",
-        "/src/screens/OnboardingAge.js"
+        "/src/screens/OnboardingAge.js",
+        "/src/screens/OnboardingTooYoung.js"
     ],
     "symbols": [
         "/src/symbols/Button.js"

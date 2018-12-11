@@ -7,6 +7,7 @@ import OnboardingGender from "./src/screens/OnboardingGender";
 import OnboardingGenderPref from "./src/screens/OnboardingGenderPref";
 import OnboardingAge from "./src/screens/OnboardingAge";
 
+import OnboardingTooYoung from "./src/screens/OnboardingTooYoung";
 import { StackNavigator, DrawerNavigator } from "react-navigation";
 const DrawerNavigation = DrawerNavigator({
   Landing: {
@@ -20,6 +21,9 @@ const DrawerNavigation = DrawerNavigator({
   },
   OnboardingAge: {
     screen: OnboardingAge
+  },
+  OnboardingTooYoung: {
+    screen: OnboardingTooYoung
   }
 });
 const StackNavigation = StackNavigator(
@@ -38,6 +42,9 @@ const StackNavigation = StackNavigator(
     },
     OnboardingAge: {
       screen: OnboardingAge
+    },
+    OnboardingTooYoung: {
+      screen: OnboardingTooYoung
     }
   },
   {
