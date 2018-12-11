@@ -1,9 +1,9 @@
 {
     "artboards": [
-        "/src/screens/Untitled.js",
-        "/src/screens/Untitled1.js",
-        "/src/screens/Untitled2.js",
-        "/src/screens/Untitled3.js"
+        "/src/screens/Landing.js",
+        "/src/screens/OnboardingGender.js",
+        "/src/screens/OnboardingGenderPref.js",
+        "/src/screens/OnboardingAge.js"
     ],
     "symbols": [
         "/src/symbols/Button.js"

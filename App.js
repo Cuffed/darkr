@@ -1,23 +1,25 @@
 import React from "react";
 import { YellowBox } from "react-native";
-import Untitled from "./src/screens/Untitled";
+
 import { Font } from "expo";
-import Untitled1 from "./src/screens/Untitled1";
-import Untitled2 from "./src/screens/Untitled2";
-import Untitled3 from "./src/screens/Untitled3";
+import Landing from "./src/screens/Landing";
+import OnboardingGender from "./src/screens/OnboardingGender";
+import OnboardingGenderPref from "./src/screens/OnboardingGenderPref";
+import OnboardingAge from "./src/screens/OnboardingAge";
+
 import { StackNavigator, DrawerNavigator } from "react-navigation";
 const DrawerNavigation = DrawerNavigator({
-  Untitled: {
-    screen: Untitled
+  Landing: {
+    screen: Landing
   },
-  Untitled1: {
-    screen: Untitled1
+  OnboardingGender: {
+    screen: OnboardingGender
   },
-  Untitled2: {
-    screen: Untitled2
+  OnboardingGenderPref: {
+    screen: OnboardingGenderPref
   },
-  Untitled3: {
-    screen: Untitled3
+  OnboardingAge: {
+    screen: OnboardingAge
   }
 });
 const StackNavigation = StackNavigator(
@@ -25,17 +27,17 @@ const StackNavigation = StackNavigator(
     DrawerNavigation: {
       screen: DrawerNavigation
     },
-    Untitled: {
-      screen: Untitled
+    Landing: {
+      screen: Landing
     },
-    Untitled1: {
-      screen: Untitled1
+    OnboardingGender: {
+      screen: OnboardingGender
     },
-    Untitled2: {
-      screen: Untitled2
+    OnboardingGenderPref: {
+      screen: OnboardingGenderPref
     },
-    Untitled3: {
-      screen: Untitled3
+    OnboardingAge: {
+      screen: OnboardingAge
     }
   },
   {
