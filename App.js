@@ -3,6 +3,8 @@ import { YellowBox } from "react-native";
 import Untitled from "./src/screens/Untitled";
 import { Font } from "expo";
 import Untitled1 from "./src/screens/Untitled1";
+import Untitled2 from "./src/screens/Untitled2";
+import Untitled3 from "./src/screens/Untitled3";
 import { StackNavigator, DrawerNavigator } from "react-navigation";
 const DrawerNavigation = DrawerNavigator({
   Untitled: {
@@ -10,6 +12,12 @@ const DrawerNavigation = DrawerNavigator({
   },
   Untitled1: {
     screen: Untitled1
+  },
+  Untitled2: {
+    screen: Untitled2
+  },
+  Untitled3: {
+    screen: Untitled3
   }
 });
 const StackNavigation = StackNavigator(
@@ -22,6 +30,12 @@ const StackNavigation = StackNavigator(
     },
     Untitled1: {
       screen: Untitled1
+    },
+    Untitled2: {
+      screen: Untitled2
+    },
+    Untitled3: {
+      screen: Untitled3
     }
   },
   {
@@ -51,7 +65,12 @@ export default class App extends React.Component {
       "Catamaran-Light": require("./src/assets/fonts/Catamaran-Light.ttf"),
       "Catamaran-SemiBold": require("./src/assets/fonts/Catamaran-SemiBold.ttf"),
       "Catamaran-Bold": require("./src/assets/fonts/Catamaran-Bold.ttf"),
-      "SFProDisplay-Medium": require("./src/assets/fonts/Arial.ttf") /*Fallback Font*/
+      "SFProDisplay-Medium": require("./src/assets/fonts/Arial.ttf") /*Fallback Font*/,
+      "SFProDisplay-Heavy": require("./src/assets/fonts/Arial.ttf") /*Fallback Font*/,
+      "SFProDisplay-Thin": require("./src/assets/fonts/Arial.ttf") /*Fallback Font*/,
+      "SFProDisplay-Italic": require("./src/assets/fonts/Arial.ttf") /*Fallback Font*/,
+      "SFProDisplay-SemiboldItalic": require("./src/assets/fonts/Arial.ttf") /*Fallback Font*/,
+      "SFProDisplay-UltralightItalic": require("./src/assets/fonts/Arial.ttf") /*Fallback Font*/
     });
 
     this.setState({ fontLoaded: true });

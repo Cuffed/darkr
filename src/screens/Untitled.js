@@ -22,15 +22,15 @@ export default class Untitled extends Component {
         <Center horizontal>
           <Text style={styles.text}>DARKR</Text>
         </Center>
-        <Center horizontal>
-          <View style={styles.rect2}>
-            <Text style={styles.text2}>Sign up with a Phone Number</Text>
-          </View>
-        </Center>
         <View style={styles.rect3}>
           <Text style={styles.text3}>Terms of Service</Text>
           <Text style={styles.text4}>Privacy Policy</Text>
         </View>
+        <Center horizontal>
+          <View style={styles.rect4}>
+            <Text style={styles.text5}>Sign up with a Phone Number</Text>
+          </View>
+        </Center>
       </View>
     );
   }
@@ -71,26 +71,7 @@ const styles = StyleSheet.create({
     fontFamily: "Catamaran-ExtraBold",
     color: "rgba(108,99,255,1)"
   },
-  rect2: {
-    bottom: 91,
-    width: "87.46666666666667%",
-    height: 62,
-    position: "absolute",
-    backgroundColor: "rgba(108,99,255,1)",
-    opacity: 1,
-    borderRadius: 100
-  },
-  text2: {
-    top: 21,
-    left: 50,
-    right: 50,
-    height: 20,
-    position: "absolute",
-    backgroundColor: "transparent",
-    fontSize: 18,
-    fontFamily: "SFProDisplay-Medium",
-    color: "rgba(239,239,239,1)"
-  },
+
   rect3: {
     left: "17.07%",
     bottom: 59.97,
@@ -111,5 +92,25 @@ const styles = StyleSheet.create({
     position: "absolute",
     backgroundColor: "transparent",
     color: "rgba(181,181,181,1)"
+  },
+  rect4: {
+    height: 63,
+    width: 327,
+    position: "absolute",
+    backgroundColor: "rgba(108,99,255,1)",
+    opacity: 1,
+    borderRadius: 100,
+    bottom: 95
+  },
+  text5: {
+    top: 21,
+    left: 49,
+    height: 20,
+    position: "absolute",
+    backgroundColor: "transparent",
+    fontSize: 18,
+    fontFamily: "SFProDisplay-Medium",
+    color: "rgba(239,239,239,1)",
+    right: 49
   }
 });

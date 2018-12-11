@@ -1,9 +1,13 @@
 {
     "artboards": [
         "/src/screens/Untitled.js",
-        "/src/screens/Untitled1.js"
+        "/src/screens/Untitled1.js",
+        "/src/screens/Untitled2.js",
+        "/src/screens/Untitled3.js"
     ],
-    "symbols": [],
+    "symbols": [
+        "/src/symbols/Button.js"
+    ],
     "assets": [],
     "defaultArtboardDirectory": "/src/screens",
     "defaultSymbolDirectory": "/src/symbols",
