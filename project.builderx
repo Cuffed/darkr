@@ -1,0 +1,18 @@
+{
+    "artboards": [
+        "/src/screens/Untitled.js",
+        "/src/screens/Untitled1.js"
+    ],
+    "symbols": [],
+    "assets": [],
+    "defaultArtboardDirectory": "/src/screens",
+    "defaultSymbolDirectory": "/src/symbols",
+    "defaultAssetDirectory": "/src/assets",
+    "deviceName": "iPhone X",
+    "deviceOrientation": "portrait",
+    "basePath": "/Users/hello/Documents/github/Masq/Masq",
+    "tempPath": "/var/folders/mx/6x1yjh6j2bb9lfpdx8zs5wrm0000gn/T/Builder21zuyRO",
+    "useStylesheet": true,
+    "rulers": {},
+    "missingFonts": []
+}
