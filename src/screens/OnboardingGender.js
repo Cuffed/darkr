@@ -15,7 +15,9 @@ export default class OnboardingGender extends Component {
           source={require("../assets/Asset_50.png")}
           resizeMode="repeat"
         />
-        <Text style={styles.text}>I'm a</Text>
+        <Center horizontal>
+          <Text style={styles.text}>I'm a</Text>
+        </Center>
         <View style={styles.rect2}>
           <Center vertical>
             <Text style={styles.text2}>Female</Text>
@@ -88,13 +90,14 @@ const styles = StyleSheet.create({
     opacity: 0.15
   },
   text: {
-    top: 122.03,
-    left: "35.73%",
+    top: 122,
+
     position: "absolute",
     backgroundColor: "transparent",
     fontSize: 48,
     fontFamily: "Catamaran-Black",
-    color: "rgba(255,255,255,1)"
+    color: "rgba(255,255,255,1)",
+    width: 128
   },
   rect2: {
     left: "6.4%",

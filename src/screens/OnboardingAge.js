@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     fontFamily: "Catamaran-Black",
     color: "rgba(255,255,255,1)",
     left: 88,
-    right: 88
+    width: 200
   },
   icon: {
     top: 46,
