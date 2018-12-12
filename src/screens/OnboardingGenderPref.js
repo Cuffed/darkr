@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   image: {
     top: 0,
     bottom: 0,
-    width: 375,
+    width: "100%",
     position: "absolute",
     opacity: 0.15
   },

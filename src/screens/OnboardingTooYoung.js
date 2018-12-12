@@ -29,9 +29,7 @@ export default class OnboardingTooYoung extends Component {
         </Center>
         <Center horizontal>
           <View style={styles.rect2}>
-            <Center horizontal>
-              <Text style={styles.text2}>See ya later, alligator!</Text>
-            </Center>
+            <Text style={styles.text2}>See ya later, alligator!</Text>
           </View>
         </Center>
         <Center horizontal>
@@ -52,16 +50,17 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
-    height: 812,
+
     position: "absolute",
     backgroundColor: "rgba(23,25,65,1)",
-    opacity: 1
+    opacity: 1,
+    bottom: 0
   },
   image: {
     top: 0,
     left: "0%",
     bottom: 0,
-    width: 375,
+    width: "100%",
     position: "absolute",
     opacity: 0.15
   },
@@ -75,7 +74,9 @@ const styles = StyleSheet.create({
     textAlign: "center",
     height: 125,
     top: 362.96,
-    left: "8%"
+    left: "8%",
+    lineHeight: 64,
+    letterSpacing: 0
   },
   icon: {
     top: 46,
@@ -101,15 +102,18 @@ const styles = StyleSheet.create({
     borderRadius: 100
   },
   text2: {
-    top: "32.31%",
-    width: 280,
-    height: 25,
+    height: 24,
     position: "absolute",
     backgroundColor: "transparent",
     fontSize: 24,
     fontFamily: "Catamaran-Black",
     color: "rgba(239,239,239,1)",
-    textAlign: "center"
+    textAlign: "center",
+    lineHeight: 32,
+    letterSpacing: 0,
+    top: "33.85%",
+    left: 0,
+    width: "100%"
   },
   text3: {
     width: 192,
@@ -120,6 +124,8 @@ const styles = StyleSheet.create({
     fontFamily: "Catamaran-Black",
     textAlign: "center",
     color: "rgba(255,255,255,1)",
-    bottom: 157.02
+    bottom: 157,
+    lineHeight: 140,
+    letterSpacing: 0
   }
 });
