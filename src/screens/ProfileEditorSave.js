@@ -22,12 +22,18 @@ const { State: TextInputState } = TextInput;
 
 export default class ProfileEditor extends Component {
   state = {
-    shift: new Animated.Value(0),
+    shift: new Animated.Value(0)
   };
 
   componentWillMount() {
-    this.keyboardDidShowSub = Keyboard.addListener('keyboardDidShow', this.handleKeyboardDidShow);
-    this.keyboardDidHideSub = Keyboard.addListener('keyboardDidHide', this.handleKeyboardDidHide);
+    this.keyboardDidShowSub = Keyboard.addListener(
+      "keyboardDidShow",
+      this.handleKeyboardDidShow
+    );
+    this.keyboardDidHideSub = Keyboard.addListener(
+      "keyboardDidHide",
+      this.handleKeyboardDidHide
+    );
   }
 
   componentWillUnmount() {
@@ -38,7 +44,9 @@ export default class ProfileEditor extends Component {
   render() {
     const { shift } = this.state;
     return (
-      <Animated.View style={[styles.root, { transform: [{translateY: shift}] }]}>
+      <Animated.View
+        style={[styles.root, { transform: [{ translateY: shift }] }]}
+      >
         <View style={styles.rect} />
         <Image
           style={styles.image}
@@ -56,12 +64,16 @@ export default class ProfileEditor extends Component {
         >
           <FlatList
             style={styles.list}
-            data={[0,1,2,3,4]}
+            data={[0, 1, 2, 3, 4]}
             showsHorizontalScrollIndicator={false}
             renderItem={({ item, separators }) => {
               return (
                 <View key={item} style={styles.rect2}>
-                  <Image resizeMode={'contain'} source={{uri: '../assets/sean-kong.png'}} style={styles.rect3} />
+                  <Image
+                    resizeMode={"contain"}
+                    source={{ uri: "../assets/sean-kong.png" }}
+                    style={styles.rect3}
+                  />
                 </View>
               );
             }}
@@ -88,38 +100,35 @@ export default class ProfileEditor extends Component {
       </Animated.View>
     );
   }
-  handleKeyboardDidShow = (event) => {
-    const { height: windowHeight } = Dimensions.get('window');
+  handleKeyboardDidShow = event => {
+    const { height: windowHeight } = Dimensions.get("window");
     const keyboardHeight = event.endCoordinates.height;
     const currentlyFocusedField = TextInputState.currentlyFocusedField();
-    UIManager.measure(currentlyFocusedField, (originX, originY, width, height, pageX, pageY) => {
-      const fieldHeight = height > 100 ? 300 : height;
-      const fieldTop = pageY;
-      const gap = (windowHeight - keyboardHeight) - (fieldTop + fieldHeight);
-      if (gap >= 0) {
-        return;
-      }
-      Animated.timing(
-        this.state.shift,
-        {
+    UIManager.measure(
+      currentlyFocusedField,
+      (originX, originY, width, height, pageX, pageY) => {
+        const fieldHeight = height > 100 ? 300 : height;
+        const fieldTop = pageY;
+        const gap = windowHeight - keyboardHeight - (fieldTop + fieldHeight);
+        if (gap >= 0) {
+          return;
+        }
+        Animated.timing(this.state.shift, {
           toValue: gap - 40,
           duration: 200,
-          useNativeDriver: true,
-        }
-      ).start();
-    });
-  }
+          useNativeDriver: true
+        }).start();
+      }
+    );
+  };
 
   handleKeyboardDidHide = () => {
-    Animated.timing(
-      this.state.shift,
-      {
-        toValue: 0,
-        duration: 200,
-        useNativeDriver: true,
-      }
-    ).start();
-  }
+    Animated.timing(this.state.shift, {
+      toValue: 0,
+      duration: 200,
+      useNativeDriver: true
+    }).start();
+  };
 }
 const styles = StyleSheet.create({
   root: {
@@ -177,7 +186,7 @@ const styles = StyleSheet.create({
   list: {
     top: 15,
     left: "0%",
-    marginLeft: '1%',
+    marginLeft: "1%",
     paddingLeft: 5,
     width: "100.0%",
     height: 260,
@@ -189,10 +198,10 @@ const styles = StyleSheet.create({
     marginTop: 8,
     marginRight: 15,
     marginLeft: 0,
-    borderColor: 'rgba(23,25,65,0.2)',
+    borderColor: "rgba(23,25,65,0.2)",
     borderWidth: 1,
     borderRadius: 10,
-    overflow: 'hidden'
+    overflow: "hidden"
   },
   rect3: {
     top: 0,
@@ -201,7 +210,7 @@ const styles = StyleSheet.create({
     height: 224,
     position: "absolute",
     backgroundColor: "rgba(255,255,255,1)",
-    opacity: 1,
+    opacity: 1
   },
   editorField: {
     top: 265,
