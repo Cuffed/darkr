@@ -5,7 +5,8 @@
         "/src/screens/OnboardingGenderPref.js",
         "/src/screens/OnboardingAge.js",
         "/src/screens/OnboardingTooYoung.js",
-        "/src/screens/OnboardingLocation.js"
+        "/src/screens/OnboardingLocation.js",
+        "/src/screens/Untitled.js"
     ],
     "symbols": [
         "/src/symbols/Button.js"

@@ -28,6 +28,9 @@ const DrawerNavigation = DrawerNavigator({
   },
   OnboardingLocation: {
     screen: OnboardingLocation
+  },
+  Untitled: {
+    screen: Untitled
   }
 });
 const StackNavigation = StackNavigator(
@@ -52,6 +55,9 @@ const StackNavigation = StackNavigator(
     },
     OnboardingLocation: {
       screen: OnboardingLocation
+    },
+    Untitled: {
+      screen: Untitled
     }
   },
   {

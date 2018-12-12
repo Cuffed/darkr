@@ -14,7 +14,9 @@ export default class OnboardingAge extends Component {
           resizeMode="repeat"
         />
         <Center horizontal>
-          <Text style={styles.text}>My age is</Text>
+          <Text style={styles.text} numberOfLines={2}>
+            My birthday is on
+          </Text>
         </Center>
         <Icon
           style={styles.icon}
@@ -59,14 +61,15 @@ const styles = StyleSheet.create({
     opacity: 0.15
   },
   text: {
-    top: 122,
+    top: 97,
     position: "absolute",
     backgroundColor: "transparent",
     fontSize: 48,
     fontFamily: "Catamaran-Black",
     color: "rgba(255,255,255,1)",
-    left: 88,
-    width: 200
+
+    width: 278,
+    textAlign: "center"
   },
   icon: {
     top: 46,
