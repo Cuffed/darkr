@@ -19,28 +19,17 @@ export default class OnboardingGenderPref extends Component {
         <Center horizontal>
           <Text style={styles.text}>Seeking a</Text>
         </Center>
+        <Icon
+          style={styles.icon4}
+          name="keyboard-backspace"
+          type="MaterialCommunityIcons"
+        />
         <Center horizontal>
           <View style={styles.rect2}>
-            <Center vertical>
-              <Text style={styles.text2}>Female</Text>
-            </Center>
+            <Text style={styles.text2}>Male</Text>
             <Center vertical>
               <Icon
-                style={styles.icon}
-                name="gender-female"
-                type="MaterialCommunityIcons"
-              />
-            </Center>
-          </View>
-        </Center>
-        <Center horizontal>
-          <View style={styles.rect3}>
-            <Center vertical>
-              <Text style={styles.text3}>Male</Text>
-            </Center>
-            <Center vertical>
-              <Icon
-                style={styles.icon2}
+                style={styles.icon5}
                 name="gender-male"
                 type="MaterialCommunityIcons"
               />
@@ -48,24 +37,29 @@ export default class OnboardingGenderPref extends Component {
           </View>
         </Center>
         <Center horizontal>
-          <View style={styles.rect4}>
-            <Center vertical>
-              <Text style={styles.text4}>Other</Text>
-            </Center>
+          <View style={styles.rect3}>
+            <Text style={styles.text3}>Female</Text>
             <Center vertical>
               <Icon
-                style={styles.icon3}
+                style={styles.icon6}
+                name="gender-female"
+                type="MaterialCommunityIcons"
+              />
+            </Center>
+          </View>
+        </Center>
+        <Center horizontal>
+          <View style={styles.rect4}>
+            <Text style={styles.text4}>Other</Text>
+            <Center vertical>
+              <Icon
+                style={styles.icon7}
                 name="gender-transgender"
                 type="MaterialCommunityIcons"
               />
             </Center>
           </View>
         </Center>
-        <Icon
-          style={styles.icon4}
-          name="keyboard-backspace"
-          type="MaterialCommunityIcons"
-        />
       </View>
     );
   }
@@ -98,35 +92,19 @@ const styles = StyleSheet.create({
     fontSize: 48,
     fontFamily: "Catamaran-Black",
     color: "rgba(255,255,255,1)",
-    width: "56.8%"
+    width: "56.8%",
+    textAlign: "center"
   },
-  rect2: {
-    bottom: 403,
-    width: "87.2%",
-    height: 63,
-    position: "absolute",
-    backgroundColor: "rgba(255,99,189,1)",
-    opacity: 1,
-    borderRadius: 100
-  },
-  text2: {
-    left: 120,
-    right: 113,
-    height: 28,
-    position: "absolute",
-    backgroundColor: "transparent",
-    fontSize: 28,
-    fontFamily: "Catamaran-Black",
-    color: "rgba(239,239,239,1)"
-  },
-  icon: {
-    left: "9.19%",
+
+  icon4: {
+    top: 46,
+    left: 22,
     position: "absolute",
     backgroundColor: "transparent",
     color: "rgba(255,255,255,1)",
     fontSize: 40
   },
-  rect3: {
+  rect2: {
     bottom: 318,
     width: "87.2%",
     height: 65,
@@ -135,7 +113,8 @@ const styles = StyleSheet.create({
     opacity: 1,
     borderRadius: 100
   },
-  text3: {
+  text2: {
+    top: "33.85%",
     left: 133.5,
     right: 133.5,
     height: 28,
@@ -143,12 +122,45 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     fontSize: 28,
     fontFamily: "Catamaran-Black",
+    lineHeight: 34,
+    letterSpacing: 0,
+    textAlign: "center",
     color: "rgba(239,239,239,1)"
   },
-  icon2: {
+  icon5: {
     left: 30,
     width: 40,
     height: 40,
+    position: "absolute",
+    backgroundColor: "transparent",
+    color: "rgba(255,255,255,1)",
+    fontSize: 40
+  },
+  rect3: {
+    bottom: 403,
+    width: "87.2%",
+    height: 63,
+    position: "absolute",
+    backgroundColor: "rgba(255,99,189,1)",
+    opacity: 1,
+    borderRadius: 100
+  },
+  text3: {
+    top: "33.33%",
+    left: 117,
+    right: 116,
+    height: 28,
+    position: "absolute",
+    backgroundColor: "transparent",
+    fontSize: 28,
+    fontFamily: "Catamaran-Black",
+    lineHeight: 34,
+    letterSpacing: 0,
+    textAlign: "center",
+    color: "rgba(239,239,239,1)"
+  },
+  icon6: {
+    left: "9.19%",
     position: "absolute",
     backgroundColor: "transparent",
     color: "rgba(255,255,255,1)",
@@ -164,25 +176,21 @@ const styles = StyleSheet.create({
     borderRadius: 100
   },
   text4: {
-    left: 124.5,
-    right: 124.5,
+    top: "33.33%",
+    left: 125,
+    right: 125,
     height: 28,
     position: "absolute",
     backgroundColor: "transparent",
     fontSize: 28,
     fontFamily: "Catamaran-Black",
+    lineHeight: 34,
+    letterSpacing: 0,
+    textAlign: "center",
     color: "rgba(239,239,239,1)"
   },
-  icon3: {
+  icon7: {
     left: 30,
-    position: "absolute",
-    backgroundColor: "transparent",
-    color: "rgba(255,255,255,1)",
-    fontSize: 40
-  },
-  icon4: {
-    top: 46,
-    left: 22,
     position: "absolute",
     backgroundColor: "transparent",
     color: "rgba(255,255,255,1)",

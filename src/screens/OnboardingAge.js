@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Center } from "@builderx/utils";
 import Icon from "@builderx/icons";
+
 import { View, StyleSheet, Image, Text, TextInput } from "react-native";
 
 export default class OnboardingAge extends Component {
@@ -14,9 +15,7 @@ export default class OnboardingAge extends Component {
           resizeMode="repeat"
         />
         <Center horizontal>
-          <Text style={styles.text} numberOfLines={2}>
-            My birthday is on
-          </Text>
+          <Text style={styles.text}>My age is</Text>
         </Center>
         <Icon
           style={styles.icon}
@@ -61,15 +60,14 @@ const styles = StyleSheet.create({
     opacity: 0.15
   },
   text: {
-    top: 97,
+    top: 122,
+    left: 88,
+    width: 200,
     position: "absolute",
     backgroundColor: "transparent",
     fontSize: 48,
     fontFamily: "Catamaran-Black",
-    color: "rgba(255,255,255,1)",
-
-    width: 278,
-    textAlign: "center"
+    color: "rgba(255,255,255,1)"
   },
   icon: {
     top: 46,

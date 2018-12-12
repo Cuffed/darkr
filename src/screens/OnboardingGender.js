@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import Icon from "@builderx/icons";
 import { Center } from "@builderx/utils";
+import Icon from "@builderx/icons";
 
 import { View, StyleSheet, Image, Text } from "react-native";
 
@@ -18,26 +18,29 @@ export default class OnboardingGender extends Component {
         <Center horizontal>
           <Text style={styles.text}>I'm a</Text>
         </Center>
-        <View style={styles.rect2}>
-          <Center vertical>
-            <Text style={styles.text2}>Female</Text>
-          </Center>
-          <Center vertical>
-            <Icon
-              style={styles.icon}
-              name="gender-female"
-              type="MaterialCommunityIcons"
-            />
-          </Center>
-        </View>
+        <Icon
+          style={styles.icon}
+          name="keyboard-backspace"
+          type="MaterialCommunityIcons"
+        />
         <Center horizontal>
-          <View style={styles.rect3}>
-            <Center vertical>
-              <Text style={styles.text3}>Male</Text>
-            </Center>
+          <View style={styles.rect2}>
+            <Text style={styles.text2}>Female</Text>
             <Center vertical>
               <Icon
                 style={styles.icon2}
+                name="gender-female"
+                type="MaterialCommunityIcons"
+              />
+            </Center>
+          </View>
+        </Center>
+        <Center horizontal>
+          <View style={styles.rect3}>
+            <Text style={styles.text3}>Male</Text>
+            <Center vertical>
+              <Icon
+                style={styles.icon3}
                 name="gender-male"
                 type="MaterialCommunityIcons"
               />
@@ -46,23 +49,16 @@ export default class OnboardingGender extends Component {
         </Center>
         <Center horizontal>
           <View style={styles.rect4}>
-            <Center vertical>
-              <Text style={styles.text4}>Other</Text>
-            </Center>
+            <Text style={styles.text4}>Other</Text>
             <Center vertical>
               <Icon
-                style={styles.icon3}
+                style={styles.icon4}
                 name="gender-transgender"
                 type="MaterialCommunityIcons"
               />
             </Center>
           </View>
         </Center>
-        <Icon
-          style={styles.icon4}
-          name="keyboard-backspace"
-          type="MaterialCommunityIcons"
-        />
       </View>
     );
   }
@@ -85,23 +81,30 @@ const styles = StyleSheet.create({
     top: 0,
     left: "0%",
     bottom: 0,
-    width: 375,
+    width: "100%",
     position: "absolute",
     opacity: 0.15
   },
   text: {
     top: 122,
-
+    width: 128,
     position: "absolute",
     backgroundColor: "transparent",
     fontSize: 48,
     fontFamily: "Catamaran-Black",
     color: "rgba(255,255,255,1)",
-    width: 128
+    textAlign: "center"
+  },
+  icon: {
+    top: 46,
+    left: 22,
+    position: "absolute",
+    backgroundColor: "transparent",
+    color: "rgba(255,255,255,1)",
+    fontSize: 40
   },
   rect2: {
-    left: "6.4%",
-    bottom: 403.01,
+    bottom: 403,
     width: "87.2%",
     height: 63,
     position: "absolute",
@@ -110,16 +113,20 @@ const styles = StyleSheet.create({
     borderRadius: 100
   },
   text2: {
-    left: 120,
-    right: 113,
+    top: "33.33%",
+    left: 117,
+    right: 116,
     height: 28,
     position: "absolute",
     backgroundColor: "transparent",
     fontSize: 28,
     fontFamily: "Catamaran-Black",
+    lineHeight: 34,
+    letterSpacing: 0,
+    textAlign: "center",
     color: "rgba(239,239,239,1)"
   },
-  icon: {
+  icon2: {
     left: "9.19%",
     position: "absolute",
     backgroundColor: "transparent",
@@ -136,6 +143,7 @@ const styles = StyleSheet.create({
     borderRadius: 100
   },
   text3: {
+    top: "33.85%",
     left: 133.5,
     right: 133.5,
     height: 28,
@@ -143,9 +151,12 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     fontSize: 28,
     fontFamily: "Catamaran-Black",
+    lineHeight: 34,
+    letterSpacing: 0,
+    textAlign: "center",
     color: "rgba(239,239,239,1)"
   },
-  icon2: {
+  icon3: {
     left: 30,
     width: 40,
     height: 40,
@@ -164,25 +175,21 @@ const styles = StyleSheet.create({
     borderRadius: 100
   },
   text4: {
-    left: 124.5,
-    right: 124.5,
+    top: "33.33%",
+    left: 125,
+    right: 125,
     height: 28,
     position: "absolute",
     backgroundColor: "transparent",
     fontSize: 28,
     fontFamily: "Catamaran-Black",
+    lineHeight: 34,
+    letterSpacing: 0,
+    textAlign: "center",
     color: "rgba(239,239,239,1)"
   },
-  icon3: {
-    left: 30,
-    position: "absolute",
-    backgroundColor: "transparent",
-    color: "rgba(255,255,255,1)",
-    fontSize: 40
-  },
   icon4: {
-    top: 46,
-    left: 22,
+    left: 30,
     position: "absolute",
     backgroundColor: "transparent",
     color: "rgba(255,255,255,1)",
