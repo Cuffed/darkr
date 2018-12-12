@@ -13,7 +13,8 @@ import ProfileEditor from "./src/screens/ProfileEditor";
 import Matchmaking from "./src/screens/Matchmaking";
 import ProfileEditorSave from "./src/screens/ProfileEditorSave";
 import Profile from "./src/screens/Profile";
-import Untitled from "./src/screens/Untitled";
+import Chat from "./src/screens/Chat";
+
 import { StackNavigator, DrawerNavigator } from "react-navigation";
 const DrawerNavigation = DrawerNavigator({
   Landing: {
@@ -46,8 +47,8 @@ const DrawerNavigation = DrawerNavigator({
   Profile: {
     screen: Profile
   },
-  Untitled: {
-    screen: Untitled
+  Chat: {
+    screen: Chat
   }
 });
 const StackNavigation = StackNavigator(
@@ -85,8 +86,8 @@ const StackNavigation = StackNavigator(
     Profile: {
       screen: Profile
     },
-    Untitled: {
-      screen: Untitled
+    Chat: {
+      screen: Chat
     }
   },
   {

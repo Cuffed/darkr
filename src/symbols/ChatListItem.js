@@ -14,15 +14,22 @@ export default class ChatListItem extends Component {
     return (
       <View style={[this.props.style]}>
         <View style={styles.rect} />
-        <Text style={styles.text}>Jon Snow, 18</Text>
+        <Text style={styles.text}>
+          {this.props.text ? this.props.text : "Jon Snow, 18"}
+        </Text>
         <Icon
           style={styles.icon}
-          name="face-profile"
-          type="MaterialCommunityIcons"
+          name={this.props.iconName ? this.props.iconName : "face-profile"}
+          type={
+            this.props.iconType ? this.props.iconType : "MaterialCommunityIcons"
+          }
         />
         <Text style={styles.text2} numberOfLines={3}>
-          \n Hi there! Roses are red, violets are blue, I'm unoriginal, how's\n
-          tonight--dinner for two?\n{" "}
+          {this.props.text2 ? (
+            this.props.text2
+          ) : (
+            "Hi there! Roses are red, violets are blue, I'm unoriginal, how's tonight--dinner for two?"
+          )}
         </Text>
         <Image
           style={styles.image}
@@ -35,13 +42,14 @@ export default class ChatListItem extends Component {
 const styles = StyleSheet.create({
   rect: {
     top: 0,
-    left: "0%",
-    width: "100%",
-    height: "100%",
+    left: 0,
+
     position: "absolute",
     backgroundColor: "rgba(23,25,65,1)",
     opacity: 1,
-    borderRadius: 15
+    borderRadius: 15,
+    bottom: 0,
+    right: 0
   },
   text: {
     left: 18,
@@ -67,8 +75,8 @@ const styles = StyleSheet.create({
   },
   text2: {
     top: 25,
-    left: "24.29%",
-    width: "75.71%",
+    left: "27.77%",
+    width: "72.23%",
     height: "68.52%",
     position: "absolute",
     backgroundColor: "transparent",
@@ -79,7 +87,7 @@ const styles = StyleSheet.create({
     color: "rgba(255,255,255,1)"
   },
   image: {
-    top: 22,
+    top: 20,
     left: 18,
     width: 68,
     height: 68,

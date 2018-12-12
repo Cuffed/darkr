@@ -197,7 +197,7 @@ const styles = StyleSheet.create({
   },
   rect6: {
     bottom: 95,
-    width: 327,
+    width: "90%",
     height: 63,
     position: "absolute",
     backgroundColor: "rgba(108,99,255,1)",
