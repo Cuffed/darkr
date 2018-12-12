@@ -50,16 +50,18 @@ export default class ProfileEditor extends Component {
           />
         </Center>
         <View style={styles.rect8} />
-        <TextInput
-          style={styles.textInput2}
-          placeholder="Who am I?"
-          placeholderTextColor="rgba(104,106,162,1)"
-          autoCapitalize="words"
-          multiline={true}
-          selectionColor="rgba(108,99,255,1)"
-          numberOfLines={20}
-          keyboardType="default"
-        />
+        <Center horizontal>
+          <TextInput
+            style={styles.textInput2}
+            placeholder="Who am I?"
+            placeholderTextColor="rgba(104,106,162,1)"
+            autoCapitalize="words"
+            multiline={true}
+            selectionColor="rgba(108,99,255,1)"
+            numberOfLines={16}
+            keyboardType="default"
+          />
+        </Center>
       </View>
     );
   }
@@ -88,7 +90,7 @@ const styles = StyleSheet.create({
     opacity: 0.3
   },
   list: {
-    top: 127,
+    top: 118,
     left: "2.93%",
     width: "97.07%",
     height: 240,
@@ -97,8 +99,8 @@ const styles = StyleSheet.create({
   rect5: {
     width: 156,
     height: 224,
-    marginRight: 8,
-    marginLeft: 13,
+    marginRight: 0,
+    marginLeft: 8,
     marginTop: 8
   },
   rect6: {
@@ -152,12 +154,12 @@ const styles = StyleSheet.create({
     width: 318,
     height: 36,
     position: "absolute",
-    fontSize: 24,
+    fontSize: 20,
     fontFamily: "Catamaran-Black",
     lineHeight: 30,
     letterSpacing: 0,
     textAlign: "left",
-    color: "rgba(69,72,142,1)"
+    color: "rgba(23,25,65,1)"
   },
   rect8: {
     top: 459,
@@ -169,18 +171,17 @@ const styles = StyleSheet.create({
     opacity: 1
   },
   textInput2: {
-    top: "57.39%",
+    top: "57.64%",
 
     width: 323,
     textAlignVertical: "top",
     position: "absolute",
-    fontSize: 24,
+    fontSize: 20,
     fontFamily: "Catamaran-Black",
     lineHeight: 30,
     letterSpacing: 0,
     textAlign: "left",
-    color: "rgba(69,72,142,1)",
-    bottom: 93,
-    left: "6.93%"
+    color: "rgba(23,25,65,1)",
+    bottom: 93
   }
 });
