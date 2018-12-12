@@ -8,7 +8,12 @@ export default class EditorLargeField extends Component {
     width: 375,
     height: 1166
   };
+  state = {
+    maxlen: 500,
+    curlen: 0
+  };
   render() {
+    const {maxlen, curlen} = this.state;
     return (
       <View style={[this.props.style]}>
         <View style={styles.rect8} />
@@ -20,16 +25,21 @@ export default class EditorLargeField extends Component {
           keyboardType="default"
           multiline={true}
           selectionColor="rgba(108,99,255,1)"
-          numberOfLines={16}
+          numberOfLines={13}
+          maxLength={maxlen}
+          onChangeText={t => {
+            this.setState({curlen: t.length})
+          }}
         />
         <Text style={styles.text4}>About me</Text>
+        <Text style={styles.text5}>{maxlen - curlen}</Text>
       </View>
     );
   }
 }
 const styles = StyleSheet.create({
   rect8: {
-    top: 29,
+    top: 33,
     left: 0,
     right: 0,
     height: "97.51%",
@@ -52,13 +62,22 @@ const styles = StyleSheet.create({
     textAlign: "left",
     color: "rgba(23,25,65,1)",
     width: "92%",
-    height: "95.71550985432734%",
+    height: "94.6%",
     left: 30,
-    top: 47.96
+    top: 43.96,
+    textAlignVertical: 'top'
   },
   text4: {
     top: 7,
     left: 26,
+    position: "absolute",
+    backgroundColor: "transparent",
+    fontFamily: "Catamaran-Black",
+    color: "rgba(23,25,65,1)"
+  },
+  text5: {
+    top: 7,
+    right: 26,
     position: "absolute",
     backgroundColor: "transparent",
     fontFamily: "Catamaran-Black",

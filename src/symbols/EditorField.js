@@ -30,7 +30,7 @@ export default class EditorField extends Component {
 }
 const styles = StyleSheet.create({
   rect7: {
-    top: "27.63%",
+    top: 30,
     left: 0,
     right: 0,
     height: 55,
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     textAlign: "left",
     color: "rgba(23,25,65,1)",
-    top: "36.84%"
+    top: 38
   },
   text3: {
     top: 0,
