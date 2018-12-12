@@ -27,6 +27,7 @@ export default class ProfileEditor extends Component {
         />
         <FlatList
           style={styles.list}
+          data={[0, 0, 0]}
           renderItem={({ item, separators }) => {
             return (
               <View style={styles.rect5}>
@@ -51,7 +52,7 @@ export default class ProfileEditor extends Component {
         <View style={styles.rect8} />
         <TextInput
           style={styles.textInput2}
-          placeholder="My name is..."
+          placeholder="Who am I?"
           placeholderTextColor="rgba(104,106,162,1)"
           autoCapitalize="words"
           multiline={true}
@@ -150,23 +151,24 @@ const styles = StyleSheet.create({
     fontFamily: "Catamaran-Black",
     lineHeight: 34,
     letterSpacing: 0,
-    color: "rgba(255,255,255,1)"
+    color: "rgba(255,255,255,1)",
+    textAlign: "center"
   },
   icon: {
-    top: 50,
-    right: 24.01,
+    top: 47,
+    right: 24,
     position: "absolute",
     backgroundColor: "transparent",
     color: "rgba(255,255,255,1)",
     fontSize: 40
   },
   rect7: {
-    top: 414,
+    top: 413.5,
     left: 0,
     right: 0,
     height: 63,
     position: "absolute",
-    backgroundColor: "rgba(191,187,255,1)",
+    backgroundColor: "rgba(229,227,253,1)",
     opacity: 1
   },
   textInput: {
@@ -188,14 +190,14 @@ const styles = StyleSheet.create({
     right: 0,
     height: "39.16%",
     position: "absolute",
-    backgroundColor: "rgba(191,187,255,1)",
+    backgroundColor: "rgba(229,227,253,1)",
     opacity: 0.82
   },
   textInput2: {
     top: "62.93%",
     left: "7.2%",
     width: "86.4%",
-    textAlignVertical: 'top',
+    textAlignVertical: "top",
     position: "absolute",
     fontSize: 24,
     fontFamily: "Catamaran-Black",

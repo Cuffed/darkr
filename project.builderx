@@ -6,7 +6,8 @@
         "/src/screens/OnboardingAge.js",
         "/src/screens/OnboardingTooYoung.js",
         "/src/screens/OnboardingLocation.js",
-        "/src/screens/ProfileEditor.js"
+        "/src/screens/ProfileEditor.js",
+        "/src/screens/Matchmaking.js"
     ],
     "symbols": [
         "/src/symbols/Button.js"

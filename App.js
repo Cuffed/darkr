@@ -1,6 +1,6 @@
 import React from "react";
 import { YellowBox } from "react-native";
-import Untitled from "./src/screens/Untitled";
+
 import { Font } from "expo";
 import Untitled1 from "./src/screens/Untitled1";
 import Landing from "./src/screens/Landing";
@@ -10,6 +10,7 @@ import OnboardingAge from "./src/screens/OnboardingAge";
 import OnboardingTooYoung from "./src/screens/OnboardingTooYoung";
 import OnboardingLocation from "./src/screens/OnboardingLocation";
 import ProfileEditor from "./src/screens/ProfileEditor";
+import Matchmaking from "./src/screens/Matchmaking";
 import { StackNavigator, DrawerNavigator } from "react-navigation";
 const DrawerNavigation = DrawerNavigator({
   Landing: {
@@ -32,6 +33,9 @@ const DrawerNavigation = DrawerNavigator({
   },
   ProfileEditor: {
     screen: ProfileEditor
+  },
+  Matchmaking: {
+    screen: Matchmaking
   }
 });
 const StackNavigation = StackNavigator(
@@ -59,6 +63,9 @@ const StackNavigation = StackNavigator(
     },
     ProfileEditor: {
       screen: ProfileEditor
+    },
+    Matchmaking: {
+      screen: Matchmaking
     }
   },
   {

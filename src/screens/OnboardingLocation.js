@@ -15,7 +15,7 @@ export default class OnboardingLocation extends Component {
           resizeMode="repeat"
         />
         <Text style={styles.text} numberOfLines={3}>
-          \n \n We need your location to match you!\n{" "}
+          We need your location to match you!
         </Text>
         <Icon
           style={styles.icon}
