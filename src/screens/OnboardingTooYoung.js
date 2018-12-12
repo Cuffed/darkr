@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Center } from "@builderx/utils";
 import Icon from "@builderx/icons";
+import { Center } from "@builderx/utils";
+
 import { View, StyleSheet, Image, Text } from "react-native";
 
 export default class OnboardingTooYoung extends Component {
@@ -49,35 +50,34 @@ const styles = StyleSheet.create({
   rect: {
     top: 0,
     left: 0,
+    bottom: 0,
     right: 0,
-
     position: "absolute",
     backgroundColor: "rgba(23,25,65,1)",
-    opacity: 1,
-    bottom: 0
+    opacity: 1
   },
   image: {
     top: 0,
     left: 0,
     bottom: 0,
-    position: "absolute",
-    opacity: 0.15,
     width: "100%",
     height: "100%",
+    position: "absolute",
+    opacity: 0.15
   },
   text: {
+    top: 362.96,
+    left: "8%",
+    width: "84%",
+    height: 125,
     position: "absolute",
     backgroundColor: "transparent",
     fontSize: 48,
     fontFamily: "Catamaran-Black",
-    color: "rgba(255,255,255,1)",
-    width: "84%",
-    textAlign: "center",
-    height: 125,
-    top: 362.96,
-    left: "8%",
     lineHeight: 64,
-    letterSpacing: 0
+    letterSpacing: 0,
+    textAlign: "center",
+    color: "rgba(255,255,255,1)"
   },
   icon: {
     top: 46,
@@ -88,10 +88,10 @@ const styles = StyleSheet.create({
     fontSize: 40
   },
   image2: {
+    top: 106,
     width: 300,
     height: 300,
-    position: "absolute",
-    top: 105.97
+    position: "absolute"
   },
   rect2: {
     bottom: 55,
@@ -103,30 +103,30 @@ const styles = StyleSheet.create({
     borderRadius: 100
   },
   text2: {
+    top: "33.85%",
+    left: 0,
+    width: "100%",
     height: 24,
     position: "absolute",
     backgroundColor: "transparent",
     fontSize: 24,
     fontFamily: "Catamaran-Black",
-    color: "rgba(239,239,239,1)",
-    textAlign: "center",
     lineHeight: 32,
     letterSpacing: 0,
-    top: "33.85%",
-    left: 0,
-    width: "100%"
+    textAlign: "center",
+    color: "rgba(239,239,239,1)"
   },
   text3: {
+    bottom: 157,
     width: 192,
     height: 118,
     position: "absolute",
     backgroundColor: "transparent",
     fontSize: 112,
     fontFamily: "Catamaran-Black",
-    textAlign: "center",
-    color: "rgba(255,255,255,1)",
-    bottom: 157,
     lineHeight: 140,
-    letterSpacing: 0
+    letterSpacing: 0,
+    textAlign: "center",
+    color: "rgba(255,255,255,1)"
   }
 });

@@ -4,7 +4,7 @@ import Icon from "@builderx/icons";
 
 import { View, StyleSheet, Image, FlatList, Text } from "react-native";
 
-export default class Untitled extends Component {
+export default class ProfileEditor extends Component {
   render() {
     return (
       <View style={styles.root}>
@@ -18,8 +18,9 @@ export default class Untitled extends Component {
           resizeMode="repeat"
         />
         <FlatList
+          showsHorizontalScrollIndicator={false}
           style={styles.list}
-          data={[0, 0, 0, 0]}
+          data={[0, 0, 0]}
           renderItem={({ item, separators }) => {
             return (
               <View style={styles.rect4}>
@@ -77,11 +78,10 @@ const styles = StyleSheet.create({
   },
   list: {
     top: 127,
-
-    width: 364,
+    left: "2.93%",
+    width: "97.06666666666666%",
     height: 224,
-    position: "absolute",
-    left: "2.93%"
+    position: "absolute"
   },
   rect4: {
     width: 156,
@@ -114,9 +114,9 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     fontSize: 28,
     fontFamily: "Catamaran-Black",
-    color: "rgba(255,255,255,1)",
     lineHeight: 34,
-    letterSpacing: 0
+    letterSpacing: 0,
+    color: "rgba(255,255,255,1)"
   },
   icon: {
     top: 50,

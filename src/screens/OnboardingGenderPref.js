@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Icon from "@builderx/icons";
 import { Center } from "@builderx/utils";
+import Icon from "@builderx/icons";
 
 import { View, StyleSheet, Image, Text } from "react-native";
 
@@ -18,7 +18,7 @@ export default class OnboardingGenderPref extends Component {
           <Text style={styles.text}>Seeking a</Text>
         </Center>
         <Icon
-          style={styles.icon4}
+          style={styles.icon}
           name="keyboard-backspace"
           type="MaterialCommunityIcons"
         />
@@ -27,7 +27,7 @@ export default class OnboardingGenderPref extends Component {
             <Text style={styles.text2}>Male</Text>
             <Center vertical>
               <Icon
-                style={styles.icon5}
+                style={styles.icon2}
                 name="gender-male"
                 type="MaterialCommunityIcons"
               />
@@ -39,7 +39,7 @@ export default class OnboardingGenderPref extends Component {
             <Text style={styles.text3}>Female</Text>
             <Center vertical>
               <Icon
-                style={styles.icon6}
+                style={styles.icon3}
                 name="gender-female"
                 type="MaterialCommunityIcons"
               />
@@ -51,7 +51,7 @@ export default class OnboardingGenderPref extends Component {
             <Text style={styles.text4}>Other</Text>
             <Center vertical>
               <Icon
-                style={styles.icon7}
+                style={styles.icon4}
                 name="gender-transgender"
                 type="MaterialCommunityIcons"
               />
@@ -78,25 +78,24 @@ const styles = StyleSheet.create({
   },
   image: {
     top: 0,
+    left: 0,
     bottom: 0,
     width: "100%",
     height: "100%",
     position: "absolute",
-    opacity: 0.15,
-    left: 0,
+    opacity: 0.15
   },
   text: {
     top: 122,
+    width: "56.8%",
     position: "absolute",
     backgroundColor: "transparent",
     fontSize: 48,
     fontFamily: "Catamaran-Black",
-    color: "rgba(255,255,255,1)",
-    width: "56.8%",
-    textAlign: "center"
+    textAlign: "center",
+    color: "rgba(255,255,255,1)"
   },
-
-  icon4: {
+  icon: {
     top: 46,
     left: 22,
     position: "absolute",
@@ -127,7 +126,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "rgba(239,239,239,1)"
   },
-  icon5: {
+  icon2: {
     left: 30,
     width: 40,
     height: 40,
@@ -159,7 +158,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "rgba(239,239,239,1)"
   },
-  icon6: {
+  icon3: {
     left: "9.19%",
     position: "absolute",
     backgroundColor: "transparent",
@@ -189,7 +188,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "rgba(239,239,239,1)"
   },
-  icon7: {
+  icon4: {
     left: 30,
     position: "absolute",
     backgroundColor: "transparent",

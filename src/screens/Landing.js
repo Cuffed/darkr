@@ -52,10 +52,11 @@ const styles = StyleSheet.create({
   image: {
     top: 0,
     left: 0,
-    width: "100%",
-    height: "100%",
+
     position: "absolute",
-    opacity: 0.15
+    opacity: 0.15,
+    width: "100%",
+    height: "100%"
   },
   image2: {
     top: 105.97,

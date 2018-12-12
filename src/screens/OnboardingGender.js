@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     position: "absolute",
-    opacity: 0.15,
+    opacity: 0.15
   },
   text: {
     top: 122,
@@ -93,8 +93,8 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     fontSize: 48,
     fontFamily: "Catamaran-Black",
-    color: "rgba(255,255,255,1)",
-    textAlign: "center"
+    textAlign: "center",
+    color: "rgba(255,255,255,1)"
   },
   icon: {
     top: 46,

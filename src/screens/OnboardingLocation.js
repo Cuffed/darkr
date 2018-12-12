@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Center } from "@builderx/utils";
 import Icon from "@builderx/icons";
+import { Center } from "@builderx/utils";
+
 import { View, StyleSheet, Image, Text } from "react-native";
 
 export default class OnboardingLocation extends Component {
@@ -14,7 +15,7 @@ export default class OnboardingLocation extends Component {
           resizeMode="repeat"
         />
         <Text style={styles.text} numberOfLines={3}>
-          We need your location to match you!
+          \n We need your location to match you!\n{" "}
         </Text>
         <Icon
           style={styles.icon}
@@ -57,24 +58,24 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     bottom: 0,
-    position: "absolute",
-    opacity: 0.15,
     width: "100%",
-    height: "100%"
+    height: "100%",
+    position: "absolute",
+    opacity: 0.15
   },
   text: {
+    top: 344,
+    left: "8%",
     width: "84%",
     height: 154,
     position: "absolute",
     backgroundColor: "transparent",
     fontSize: 48,
     fontFamily: "Catamaran-Black",
-    textAlign: "center",
-    color: "rgba(23,25,65,1)",
-    top: 344,
-    left: "8%",
     lineHeight: 54,
-    letterSpacing: 0
+    letterSpacing: 0,
+    textAlign: "center",
+    color: "rgba(23,25,65,1)"
   },
   icon: {
     top: 46,
@@ -85,42 +86,42 @@ const styles = StyleSheet.create({
     fontSize: 40
   },
   rect2: {
+    top: 509.98,
+    left: "6.4%",
     width: "87.2%",
     height: 65,
     position: "absolute",
     backgroundColor: "rgba(23,25,65,1)",
     opacity: 1,
-    borderRadius: 100,
-    left: "6.4%",
-    top: 509.98
+    borderRadius: 100
   },
   text2: {
+    top: "32.31%",
+    left: "26.3%",
+    width: 193,
     height: 25,
     position: "absolute",
     backgroundColor: "transparent",
     fontSize: 24,
     fontFamily: "Catamaran-Black",
-    color: "rgba(239,239,239,1)",
-    width: 193,
-    left: "26.3%",
-    top: "32.31%",
     lineHeight: 32,
-    letterSpacing: 0
+    letterSpacing: 0,
+    color: "rgba(239,239,239,1)"
+  },
+  icon2: {
+    top: "26.56%",
+    left: 29,
+    width: 29,
+    height: 30,
+    position: "absolute",
+    backgroundColor: "transparent",
+    color: "rgba(255,255,255,1)",
+    fontSize: 30
   },
   image2: {
     top: 117,
     width: 252,
     height: 252,
     position: "absolute"
-  },
-  icon2: {
-    left: 29,
-    position: "absolute",
-    backgroundColor: "transparent",
-    color: "rgba(255,255,255,1)",
-    fontSize: 30,
-    top: "26.56%",
-    width: 29,
-    height: 30
   }
 });
