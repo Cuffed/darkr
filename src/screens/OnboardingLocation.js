@@ -24,6 +24,11 @@ export default class OnboardingLocation extends Component {
         <Center horizontal>
           <View style={styles.rect2}>
             <Text style={styles.text2}>Turn on Location</Text>
+            <Icon
+              style={styles.icon2}
+              name="crosshairs-gps"
+              type="MaterialCommunityIcons"
+            />
           </View>
         </Center>
         <Center horizontal>
@@ -75,7 +80,7 @@ const styles = StyleSheet.create({
     left: 22,
     position: "absolute",
     backgroundColor: "transparent",
-    color: "rgba(255,255,255,1)",
+    color: "rgba(23,25,65,1)",
     fontSize: 40
   },
   rect2: {
@@ -103,5 +108,15 @@ const styles = StyleSheet.create({
     width: 252,
     height: 252,
     position: "absolute"
+  },
+  icon2: {
+    left: 29,
+    position: "absolute",
+    backgroundColor: "transparent",
+    color: "rgba(255,255,255,1)",
+    fontSize: 30,
+    top: "26.56%",
+    width: 29,
+    height: 30
   }
 });
