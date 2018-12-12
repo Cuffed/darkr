@@ -16,10 +16,6 @@ export default class ProfileEditor extends Component {
     return (
       <View style={styles.root}>
         <View style={styles.rect} />
-        <View style={styles.rect2}>
-          <View style={styles.rect3} />
-        </View>
-        <View style={styles.rect4} />
         <Image
           style={styles.image}
           source={require("../assets/Asset_60.png")}
@@ -41,14 +37,18 @@ export default class ProfileEditor extends Component {
           <Text style={styles.text}>Edit Profile</Text>
         </Center>
         <Icon style={styles.icon} name="check" type="MaterialCommunityIcons" />
-        <View style={styles.rect7} />
-        <TextInput
-          style={styles.textInput}
-          placeholder="My name is..."
-          placeholderTextColor="rgba(104,106,162,1)"
-          autoCapitalize="words"
-          selectionColor="rgba(108,99,255,1)"
-        />
+        <Center vertical>
+          <View style={styles.rect7} />
+        </Center>
+        <Center>
+          <TextInput
+            style={styles.textInput}
+            placeholder="My name is..."
+            placeholderTextColor="rgba(104,106,162,1)"
+            autoCapitalize="words"
+            selectionColor="rgba(108,99,255,1)"
+          />
+        </Center>
         <View style={styles.rect8} />
         <TextInput
           style={styles.textInput2}
@@ -72,37 +72,13 @@ const styles = StyleSheet.create({
   rect: {
     top: 0,
     left: 0,
-    bottom: 0,
+    bottom: 705.61,
     right: 0,
     position: "absolute",
     backgroundColor: "rgba(23,25,65,1)",
     opacity: 1
   },
-  rect2: {
-    top: 107,
-    left: 0,
-    right: 0,
-    height: 263,
-    position: "absolute"
-  },
-  rect3: {
-    top: 0,
-    left: 0,
-    right: 0,
-    height: 263,
-    position: "absolute",
-    backgroundColor: "rgba(191,187,255,1)",
-    opacity: 1
-  },
-  rect4: {
-    top: 494,
-    left: 0,
-    right: 0,
-    height: 318,
-    position: "absolute",
-    backgroundColor: "rgba(191,187,255,1)",
-    opacity: 1
-  },
+
   image: {
     top: 0,
     left: 0,
@@ -163,17 +139,14 @@ const styles = StyleSheet.create({
     fontSize: 40
   },
   rect7: {
-    top: 413.5,
     left: 0,
     right: 0,
     height: 63,
     position: "absolute",
-    backgroundColor: "rgba(229,227,253,1)",
+    backgroundColor: "rgba(255,255,255,1)",
     opacity: 1
   },
   textInput: {
-    top: 427,
-    left: 33,
     width: 318,
     height: 36,
     position: "absolute",
@@ -185,18 +158,18 @@ const styles = StyleSheet.create({
     color: "rgba(69,72,142,1)"
   },
   rect8: {
-    top: 494,
+    top: 459,
     left: 0,
     right: 0,
-    height: "39.16%",
+    height: "32.02%",
     position: "absolute",
-    backgroundColor: "rgba(229,227,253,1)",
-    opacity: 0.82
+    backgroundColor: "rgba(255,255,255,1)",
+    opacity: 1
   },
   textInput2: {
-    top: "62.93%",
-    left: "7.2%",
-    width: "86.4%",
+    top: "57.39%",
+
+    width: 323,
     textAlignVertical: "top",
     position: "absolute",
     fontSize: 24,
@@ -205,6 +178,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     textAlign: "left",
     color: "rgba(69,72,142,1)",
-    bottom: 47.99
+    bottom: 93,
+    left: "6.93%"
   }
 });

@@ -2,7 +2,7 @@ import React from "react";
 import { YellowBox } from "react-native";
 
 import { Font } from "expo";
-import Untitled1 from "./src/screens/Untitled1";
+
 import Landing from "./src/screens/Landing";
 import OnboardingGender from "./src/screens/OnboardingGender";
 import OnboardingGenderPref from "./src/screens/OnboardingGenderPref";
