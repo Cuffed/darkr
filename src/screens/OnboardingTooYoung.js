@@ -15,7 +15,7 @@ export default class OnboardingTooYoung extends Component {
           resizeMode="repeat"
         />
         <Text style={styles.text} numberOfLines={2}>
-          Sorry, you're too young!
+          \n Sorry, you're too young!\n{" "}
         </Text>
         <Icon
           style={styles.icon}
@@ -35,7 +35,7 @@ export default class OnboardingTooYoung extends Component {
         </Center>
         <Center horizontal>
           <Text style={styles.text3} numberOfLines={1}>
-            18+
+            \n 18+\n{" "}
           </Text>
         </Center>
       </View>
@@ -59,7 +59,6 @@ const styles = StyleSheet.create({
   image: {
     top: 0,
     left: 0,
-    bottom: 0,
     width: "100%",
     height: "100%",
     position: "absolute",

@@ -2,29 +2,55 @@ import React, { Component } from "react";
 import { Center } from "@builderx/utils";
 import Icon from "@builderx/icons";
 
-import { View, StyleSheet, Image, FlatList, Text } from "react-native";
+import {
+  Animated,
+  View,
+  StyleSheet,
+  Dimensions,
+  Keyboard,
+  UIManager,
+  Image,
+  FlatList,
+  Text,
+  TextInput
+} from "react-native";
+const { State: TextInputState } = TextInput;
 
 export default class ProfileEditor extends Component {
+  state = {
+    shift: new Animated.Value(0),
+  };
+
+  componentWillMount() {
+    this.keyboardDidShowSub = Keyboard.addListener('keyboardDidShow', this.handleKeyboardDidShow);
+    this.keyboardDidHideSub = Keyboard.addListener('keyboardDidHide', this.handleKeyboardDidHide);
+  }
+
+  componentWillUnmount() {
+    this.keyboardDidShowSub.remove();
+    this.keyboardDidHideSub.remove();
+  }
+
   render() {
+    const { shift } = this.state;
     return (
-      <View style={styles.root}>
+      <Animated.View style={[styles.root, { transform: [{translateY: shift}] }]}>
         <View style={styles.rect} />
         <View style={styles.rect2}>
           <View style={styles.rect3} />
         </View>
+        <View style={styles.rect4} />
         <Image
           style={styles.image}
           source={require("../assets/Asset_60.png")}
           resizeMode="repeat"
         />
         <FlatList
-          showsHorizontalScrollIndicator={false}
           style={styles.list}
-          data={[0, 0, 0]}
           renderItem={({ item, separators }) => {
             return (
-              <View style={styles.rect4}>
-                <View style={styles.rect5} />
+              <View style={styles.rect5}>
+                <View style={styles.rect6} />
               </View>
             );
           }}
@@ -34,8 +60,60 @@ export default class ProfileEditor extends Component {
           <Text style={styles.text}>Edit Profile</Text>
         </Center>
         <Icon style={styles.icon} name="check" type="MaterialCommunityIcons" />
-      </View>
+        <View style={styles.rect7} />
+        <TextInput
+          style={styles.textInput}
+          placeholder="My name is..."
+          placeholderTextColor="rgba(104,106,162,1)"
+          autoCapitalize="words"
+          selectionColor="rgba(108,99,255,1)"
+        />
+        <View style={styles.rect8} />
+        <TextInput
+          style={styles.textInput2}
+          placeholder="My name is..."
+          placeholderTextColor="rgba(104,106,162,1)"
+          autoCapitalize="words"
+          multiline={true}
+          selectionColor="rgba(108,99,255,1)"
+          numberOfLines={20}
+          keyboardType="default"
+        />
+      </Animated.View>
     );
+  }
+
+  handleKeyboardDidShow = (event) => {
+    const { height: windowHeight } = Dimensions.get('window');
+    const keyboardHeight = event.endCoordinates.height;
+    const currentlyFocusedField = TextInputState.currentlyFocusedField();
+    UIManager.measure(currentlyFocusedField, (originX, originY, width, height, pageX, pageY) => {
+      const fieldHeight = height;
+      const fieldTop = pageY;
+      const gap = (windowHeight - keyboardHeight) - (fieldTop + fieldHeight);
+      if (gap >= 0) {
+        return;
+      }
+      Animated.timing(
+        this.state.shift,
+        {
+          toValue: gap,
+          duration: 200,
+          useNativeDriver: true,
+        }
+      ).start();
+    });
+  }
+
+  handleKeyboardDidHide = () => {
+    Animated.timing(
+      this.state.shift,
+      {
+        toValue: 0,
+        duration: 200,
+        useNativeDriver: true,
+      }
+    ).start();
   }
 }
 const styles = StyleSheet.create({
@@ -68,6 +146,15 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(191,187,255,1)",
     opacity: 1
   },
+  rect4: {
+    top: 494,
+    left: 0,
+    right: 0,
+    height: 318,
+    position: "absolute",
+    backgroundColor: "rgba(191,187,255,1)",
+    opacity: 1
+  },
   image: {
     top: 0,
     left: 0,
@@ -83,12 +170,12 @@ const styles = StyleSheet.create({
     height: 224,
     position: "absolute"
   },
-  rect4: {
+  rect5: {
     width: 156,
     height: 224,
     marginRight: 13
   },
-  rect5: {
+  rect6: {
     top: 0,
     left: 0,
     width: 156,
@@ -125,5 +212,50 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     color: "rgba(255,255,255,1)",
     fontSize: 40
+  },
+  rect7: {
+    top: 414,
+    left: 0,
+    right: 0,
+    height: 63,
+    position: "absolute",
+    backgroundColor: "rgba(191,187,255,1)",
+    opacity: 1
+  },
+  textInput: {
+    top: 427,
+    left: 33,
+    width: 318,
+    height: 36,
+    position: "absolute",
+    fontSize: 24,
+    fontFamily: "Catamaran-Black",
+    lineHeight: 30,
+    letterSpacing: 0,
+    textAlign: "left",
+    color: "rgba(69,72,142,1)"
+  },
+  rect8: {
+    top: 494,
+    left: 0,
+    right: 0,
+    height: "39.16%",
+    position: "absolute",
+    backgroundColor: "rgba(191,187,255,1)",
+    opacity: 0.82
+  },
+  textInput2: {
+    top: "62.93%",
+    left: "7.2%",
+    width: "86.4%",
+    textAlignVertical: 'top',
+    position: "absolute",
+    fontSize: 24,
+    fontFamily: "Catamaran-Black",
+    lineHeight: 30,
+    letterSpacing: 0,
+    textAlign: "left",
+    color: "rgba(69,72,142,1)",
+    bottom: 47.99
   }
 });

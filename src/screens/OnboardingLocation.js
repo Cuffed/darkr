@@ -15,7 +15,7 @@ export default class OnboardingLocation extends Component {
           resizeMode="repeat"
         />
         <Text style={styles.text} numberOfLines={3}>
-          \n We need your location to match you!\n{" "}
+          \n \n We need your location to match you!\n{" "}
         </Text>
         <Icon
           style={styles.icon}
@@ -57,7 +57,6 @@ const styles = StyleSheet.create({
   image: {
     top: 0,
     left: 0,
-    bottom: 0,
     width: "100%",
     height: "100%",
     position: "absolute",
