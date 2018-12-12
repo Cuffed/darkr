@@ -3,7 +3,7 @@ import { Center } from "@builderx/utils";
 import Icon from "@builderx/icons";
 import { View, StyleSheet, Image, Text } from "react-native";
 
-export default class OnboardingTooYoung extends Component {
+export default class OnboardingLocation extends Component {
   render() {
     return (
       <View style={styles.root}>
@@ -14,7 +14,7 @@ export default class OnboardingTooYoung extends Component {
           resizeMode="repeat"
         />
         <Text style={styles.text} numberOfLines={2}>
-          Sorry, you're too young!
+          We need your location to match you!
         </Text>
         <Icon
           style={styles.icon}
@@ -22,22 +22,15 @@ export default class OnboardingTooYoung extends Component {
           type="MaterialCommunityIcons"
         />
         <Center horizontal>
-          <Image
-            style={styles.image2}
-            source={require("../assets/untitled_(3).png")}
-          />
-        </Center>
-        <Center horizontal>
           <View style={styles.rect2}>
-            <Center horizontal>
-              <Text style={styles.text2}>See ya later, alligator!</Text>
-            </Center>
+            <Text style={styles.text2}>Turn on Location</Text>
           </View>
         </Center>
         <Center horizontal>
-          <Text style={styles.text3} numberOfLines={1}>
-            18+
-          </Text>
+          <Image
+            style={styles.image2}
+            source={require("../assets/untitled_(4).png")}
+          />
         </Center>
       </View>
     );
@@ -54,7 +47,7 @@ const styles = StyleSheet.create({
     right: 0,
     height: 812,
     position: "absolute",
-    backgroundColor: "rgba(23,25,65,1)",
+    backgroundColor: "rgba(255,255,255,1)",
     opacity: 1
   },
   image: {
@@ -66,15 +59,15 @@ const styles = StyleSheet.create({
     opacity: 0.15
   },
   text: {
+    width: "84%",
+    height: 154,
     position: "absolute",
     backgroundColor: "transparent",
     fontSize: 48,
     fontFamily: "Catamaran-Black",
-    color: "rgba(255,255,255,1)",
-    width: "84%",
     textAlign: "center",
-    height: 125,
-    top: 362.96,
+    color: "rgba(23,25,65,1)",
+    top: 344,
     left: "8%"
   },
   icon: {
@@ -85,41 +78,30 @@ const styles = StyleSheet.create({
     color: "rgba(255,255,255,1)",
     fontSize: 40
   },
-  image2: {
-    width: 300,
-    height: 300,
-    position: "absolute",
-    top: 105.97
-  },
   rect2: {
-    bottom: 55,
+    bottom: 237,
     width: "87.2%",
     height: 65,
     position: "absolute",
-    backgroundColor: "rgba(108,99,255,1)",
+    backgroundColor: "rgba(23,25,65,1)",
     opacity: 1,
     borderRadius: 100
   },
   text2: {
-    top: "32.31%",
-    width: 280,
     height: 25,
     position: "absolute",
     backgroundColor: "transparent",
     fontSize: 24,
     fontFamily: "Catamaran-Black",
     color: "rgba(239,239,239,1)",
-    textAlign: "center"
+    width: 193,
+    left: "26.3%",
+    top: "32.31%"
   },
-  text3: {
-    width: 192,
-    height: 118,
-    position: "absolute",
-    backgroundColor: "transparent",
-    fontSize: 112,
-    fontFamily: "Catamaran-Black",
-    textAlign: "center",
-    color: "rgba(255,255,255,1)",
-    bottom: 157.02
+  image2: {
+    top: 117,
+    width: 252,
+    height: 252,
+    position: "absolute"
   }
 });

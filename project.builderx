@@ -4,7 +4,8 @@
         "/src/screens/OnboardingGender.js",
         "/src/screens/OnboardingGenderPref.js",
         "/src/screens/OnboardingAge.js",
-        "/src/screens/OnboardingTooYoung.js"
+        "/src/screens/OnboardingTooYoung.js",
+        "/src/screens/OnboardingLocation.js"
     ],
     "symbols": [
         "/src/symbols/Button.js"

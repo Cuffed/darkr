@@ -1,13 +1,14 @@
 import React from "react";
 import { YellowBox } from "react-native";
-
+import Untitled from "./src/screens/Untitled";
 import { Font } from "expo";
+import Untitled1 from "./src/screens/Untitled1";
 import Landing from "./src/screens/Landing";
 import OnboardingGender from "./src/screens/OnboardingGender";
 import OnboardingGenderPref from "./src/screens/OnboardingGenderPref";
 import OnboardingAge from "./src/screens/OnboardingAge";
-
 import OnboardingTooYoung from "./src/screens/OnboardingTooYoung";
+import OnboardingLocation from "./src/screens/OnboardingLocation";
 import { StackNavigator, DrawerNavigator } from "react-navigation";
 const DrawerNavigation = DrawerNavigator({
   Landing: {
@@ -24,6 +25,9 @@ const DrawerNavigation = DrawerNavigator({
   },
   OnboardingTooYoung: {
     screen: OnboardingTooYoung
+  },
+  OnboardingLocation: {
+    screen: OnboardingLocation
   }
 });
 const StackNavigation = StackNavigator(
@@ -45,6 +49,9 @@ const StackNavigation = StackNavigator(
     },
     OnboardingTooYoung: {
       screen: OnboardingTooYoung
+    },
+    OnboardingLocation: {
+      screen: OnboardingLocation
     }
   },
   {
