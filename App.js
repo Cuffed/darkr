@@ -12,6 +12,8 @@ import OnboardingLocation from "./src/screens/OnboardingLocation";
 import ProfileEditor from "./src/screens/ProfileEditor";
 import Matchmaking from "./src/screens/Matchmaking";
 import ProfileEditorSave from "./src/screens/ProfileEditorSave";
+import Profile from "./src/screens/Profile";
+import Untitled from "./src/screens/Untitled";
 import { StackNavigator, DrawerNavigator } from "react-navigation";
 const DrawerNavigation = DrawerNavigator({
   Landing: {
@@ -40,6 +42,12 @@ const DrawerNavigation = DrawerNavigator({
   },
   ProfileEditorSave: {
     screen: ProfileEditorSave
+  },
+  Profile: {
+    screen: Profile
+  },
+  Untitled: {
+    screen: Untitled
   }
 });
 const StackNavigation = StackNavigator(
@@ -73,6 +81,12 @@ const StackNavigation = StackNavigator(
     },
     ProfileEditorSave: {
       screen: ProfileEditorSave
+    },
+    Profile: {
+      screen: Profile
+    },
+    Untitled: {
+      screen: Untitled
     }
   },
   {

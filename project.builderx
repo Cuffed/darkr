@@ -8,12 +8,15 @@
         "/src/screens/OnboardingLocation.js",
         "/src/screens/ProfileEditor.js",
         "/src/screens/Matchmaking.js",
-        "/src/screens/ProfileEditorSave.js"
+        "/src/screens/ProfileEditorSave.js",
+        "/src/screens/Profile.js",
+        "/src/screens/Untitled.js"
     ],
     "symbols": [
         "/src/symbols/Button.js",
         "/src/symbols/EditorField.js",
-        "/src/symbols/EditorLargeField.js"
+        "/src/symbols/EditorLargeField.js",
+        "/src/symbols/ChatListItem.js"
     ],
     "assets": [],
     "defaultArtboardDirectory": "/src/screens",

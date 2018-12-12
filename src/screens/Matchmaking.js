@@ -42,6 +42,14 @@ export default class Matchmaking extends Component {
         <Center horizontal>
           <Text style={styles.text}>DARKR</Text>
         </Center>
+        <Text style={styles.text2}>Jon Snow, 18</Text>
+        <Center horizontal>
+          <Icon
+            name="information"
+            style={styles.icon5}
+            type="MaterialCommunityIcons"
+          />
+        </Center>
       </View>
     );
   }
@@ -88,8 +96,8 @@ const styles = StyleSheet.create({
     width: 81,
     height: 81,
     position: "absolute",
-    left: 58.01,
-    bottom: 26.02
+    left: 58.5,
+    bottom: 26
   },
   icon: {
     position: "absolute",
@@ -105,11 +113,11 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     color: "rgba(255,255,255,1)",
     fontSize: 40,
-    bottom: 46
+    bottom: 46.5
   },
   icon3: {
     top: 44,
-    left: 15,
+    left: 10,
     position: "absolute",
     backgroundColor: "transparent",
     color: "rgba(23,25,65,1)",
@@ -135,5 +143,26 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     color: "rgba(23,25,65,1)",
     textAlign: "center"
+  },
+  text2: {
+    position: "absolute",
+    backgroundColor: "transparent",
+    color: "rgba(255,255,255,1)",
+    fontFamily: "Catamaran-Black",
+    fontSize: 34,
+    left: 10,
+    bottom: 126,
+    height: 33,
+    width: "94.4%",
+    textAlign: "center",
+    lineHeight: 42,
+    letterSpacing: 0
+  },
+  icon5: {
+    top: 705,
+    position: "absolute",
+    backgroundColor: "transparent",
+    color: "rgba(255,255,255,1)",
+    fontSize: 25
   }
 });
