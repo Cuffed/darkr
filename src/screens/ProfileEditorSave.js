@@ -3,18 +3,38 @@ import { Center } from "@builderx/utils";
 import Icon from "@builderx/icons";
 
 import {
+  Animated,
   View,
   StyleSheet,
+  Dimensions,
+  Keyboard,
+  UIManager,
   Image,
   FlatList,
   Text,
   TextInput
 } from "react-native";
+const { State: TextInputState } = TextInput;
 
 export default class ProfileEditor extends Component {
+  state = {
+    shift: new Animated.Value(0),
+  };
+
+  componentWillMount() {
+    this.keyboardDidShowSub = Keyboard.addListener('keyboardDidShow', this.handleKeyboardDidShow);
+    this.keyboardDidHideSub = Keyboard.addListener('keyboardDidHide', this.handleKeyboardDidHide);
+  }
+
+  componentWillUnmount() {
+    this.keyboardDidShowSub.remove();
+    this.keyboardDidHideSub.remove();
+  }
+
   render() {
+    const { shift } = this.state;
     return (
-      <View style={styles.root}>
+      <Animated.View style={[styles.root, { transform: [{translateY: shift}] }]}>
         <View style={styles.rect} />
         <View style={styles.rect2}>
           <View style={styles.rect3} />
@@ -59,8 +79,41 @@ export default class ProfileEditor extends Component {
           numberOfLines={20}
           keyboardType="default"
         />
-      </View>
+      </Animated.View>
     );
+  }
+
+  handleKeyboardDidShow = (event) => {
+    const { height: windowHeight } = Dimensions.get('window');
+    const keyboardHeight = event.endCoordinates.height;
+    const currentlyFocusedField = TextInputState.currentlyFocusedField();
+    UIManager.measure(currentlyFocusedField, (originX, originY, width, height, pageX, pageY) => {
+      const fieldHeight = height;
+      const fieldTop = pageY;
+      const gap = (windowHeight - keyboardHeight) - (fieldTop + fieldHeight);
+      if (gap >= 0) {
+        return;
+      }
+      Animated.timing(
+        this.state.shift,
+        {
+          toValue: gap,
+          duration: 200,
+          useNativeDriver: true,
+        }
+      ).start();
+    });
+  }
+
+  handleKeyboardDidHide = () => {
+    Animated.timing(
+      this.state.shift,
+      {
+        toValue: 0,
+        duration: 200,
+        useNativeDriver: true,
+      }
+    ).start();
   }
 }
 const styles = StyleSheet.create({
