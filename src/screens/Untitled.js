@@ -1,36 +1,37 @@
 import React, { Component } from "react";
 import { Center } from "@builderx/utils";
+import Icon from "@builderx/icons";
 
-import { View, StyleSheet, Image, Text } from "react-native";
+import { View, StyleSheet, Image, FlatList, Text } from "react-native";
 
 export default class Untitled extends Component {
   render() {
     return (
       <View style={styles.root}>
         <View style={styles.rect} />
+        <View style={styles.rect2}>
+          <View style={styles.rect3} />
+        </View>
         <Image
           style={styles.image}
-          source={require("../assets/Asset_50.png")}
+          source={require("../assets/Asset_60.png")}
           resizeMode="repeat"
         />
+        <FlatList
+          style={styles.list}
+          renderItem={({ item, separators }) => {
+            return (
+              <View style={styles.rect4}>
+                <View style={styles.rect5} />
+              </View>
+            );
+          }}
+          horizontal={true}
+        />
         <Center horizontal>
-          <Image
-            style={styles.image2}
-            source={require("../assets/vector-couple-sm.png")}
-          />
+          <Text style={styles.text}>Edit Profile</Text>
         </Center>
-        <Center horizontal>
-          <Text style={styles.text}>DARKR</Text>
-        </Center>
-        <View style={styles.rect3}>
-          <Text style={styles.text3}>Terms of Service</Text>
-          <Text style={styles.text4}>Privacy Policy</Text>
-        </View>
-        <Center horizontal>
-          <View style={styles.rect4}>
-            <Text style={styles.text5}>Sign up with a Phone Number</Text>
-          </View>
-        </Center>
+        <Icon style={styles.icon} name="check" type="MaterialCommunityIcons" />
       </View>
     );
   }
@@ -49,68 +50,78 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(23,25,65,1)",
     opacity: 1
   },
-  image: {
-    top: "0%",
-    left: "0%",
-    width: 375,
-    height: 812,
-    position: "absolute",
-    opacity: 0.15
-  },
-  image2: {
-    top: 105.97,
-    width: 300,
-    height: 300,
-    position: "absolute"
-  },
-  text: {
-    top: 386,
-    position: "absolute",
-    backgroundColor: "transparent",
-    fontSize: 72,
-    fontFamily: "Catamaran-ExtraBold",
-    color: "rgba(108,99,255,1)"
-  },
-
-  rect3: {
-    left: "17.07%",
-    bottom: 59.97,
-    width: 247,
-    height: 14,
-    position: "absolute"
-  },
-  text3: {
+  rect2: {
+    top: 107,
     left: 0,
-    bottom: 0,
-    position: "absolute",
-    backgroundColor: "transparent",
-    color: "rgba(181,181,181,1)"
+    right: 0,
+    height: 263,
+    position: "absolute"
   },
-  text4: {
-    bottom: 0,
-    right: -0.01,
+  rect3: {
+    top: 0,
+    left: 0,
+    right: 0,
+    height: 263,
     position: "absolute",
-    backgroundColor: "transparent",
-    color: "rgba(181,181,181,1)"
+    backgroundColor: "rgba(191,187,255,1)",
+    opacity: 1
+  },
+  image: {
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    opacity: 0.3
+  },
+  list: {
+    top: 127,
+    left: 20,
+    width: 354,
+    height: 224,
+    position: "absolute"
   },
   rect4: {
-    height: 63,
-    width: 327,
-    position: "absolute",
-    backgroundColor: "rgba(108,99,255,1)",
-    opacity: 1,
-    borderRadius: 100,
-    bottom: 95
+    width: 156,
+    height: 224,
+    marginRight: 13
   },
-  text5: {
-    top: 21,
-    left: 49,
-    height: 20,
+  rect5: {
+    top: 0,
+    left: 0,
+    width: 156,
+    height: 224,
+    position: "absolute",
+    elevation: 15,
+    backgroundColor: "rgba(255,255,255,1)",
+    opacity: 1,
+    borderRadius: 10,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 0,
+      height: 0
+    },
+    shadowOpacity: 0.37,
+    shadowRadius: 5
+  },
+  text: {
+    top: 58,
+    width: 154,
+    height: 32,
     position: "absolute",
     backgroundColor: "transparent",
-    fontSize: 18,
-    fontFamily: "SFProDisplay-Medium",
-    color: "rgba(239,239,239,1)",
-    right: 49
+    fontSize: 28,
+    fontFamily: "Catamaran-Black",
+    color: "rgba(255,255,255,1)",
+    lineHeight: 34,
+    letterSpacing: 0
+  },
+  icon: {
+    top: 50,
+    right: 24.01,
+    position: "absolute",
+    backgroundColor: "transparent",
+    color: "rgba(255,255,255,1)",
+    fontSize: 40
   }
 });

@@ -9,13 +9,11 @@ export default class OnboardingGenderPref extends Component {
     return (
       <View style={styles.root}>
         <View style={styles.rect} />
-        <Center horizontal>
-          <Image
-            style={styles.image}
-            source={require("../assets/Asset_50.png")}
-            resizeMode="repeat"
-          />
-        </Center>
+        <Image
+          style={styles.image}
+          source={require("../assets/Asset_50.png")}
+          resizeMode="repeat"
+        />
         <Center horizontal>
           <Text style={styles.text}>Seeking a</Text>
         </Center>
@@ -82,8 +80,10 @@ const styles = StyleSheet.create({
     top: 0,
     bottom: 0,
     width: "100%",
+    height: "100%",
     position: "absolute",
-    opacity: 0.15
+    opacity: 0.15,
+    left: 0,
   },
   text: {
     top: 122,

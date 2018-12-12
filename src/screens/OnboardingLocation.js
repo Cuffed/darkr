@@ -13,7 +13,7 @@ export default class OnboardingLocation extends Component {
           source={require("../assets/Asset_50.png")}
           resizeMode="repeat"
         />
-        <Text style={styles.text} numberOfLines={2}>
+        <Text style={styles.text} numberOfLines={3}>
           We need your location to match you!
         </Text>
         <Icon
@@ -21,16 +21,14 @@ export default class OnboardingLocation extends Component {
           name="keyboard-backspace"
           type="MaterialCommunityIcons"
         />
-        <Center horizontal>
-          <View style={styles.rect2}>
-            <Text style={styles.text2}>Turn on Location</Text>
-            <Icon
-              style={styles.icon2}
-              name="crosshairs-gps"
-              type="MaterialCommunityIcons"
-            />
-          </View>
-        </Center>
+        <View style={styles.rect2}>
+          <Text style={styles.text2}>Turn on Location</Text>
+          <Icon
+            style={styles.icon2}
+            name="crosshairs-gps"
+            type="MaterialCommunityIcons"
+          />
+        </View>
         <Center horizontal>
           <Image
             style={styles.image2}
@@ -57,11 +55,12 @@ const styles = StyleSheet.create({
   },
   image: {
     top: 0,
-    left: "0%",
+    left: 0,
     bottom: 0,
-    width: 375,
     position: "absolute",
-    opacity: 0.15
+    opacity: 0.15,
+    width: "100%",
+    height: "100%"
   },
   text: {
     width: "84%",
@@ -73,7 +72,9 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "rgba(23,25,65,1)",
     top: 344,
-    left: "8%"
+    left: "8%",
+    lineHeight: 54,
+    letterSpacing: 0
   },
   icon: {
     top: 46,
@@ -84,13 +85,14 @@ const styles = StyleSheet.create({
     fontSize: 40
   },
   rect2: {
-    bottom: 237,
     width: "87.2%",
     height: 65,
     position: "absolute",
     backgroundColor: "rgba(23,25,65,1)",
     opacity: 1,
-    borderRadius: 100
+    borderRadius: 100,
+    left: "6.4%",
+    top: 509.98
   },
   text2: {
     height: 25,
@@ -101,7 +103,9 @@ const styles = StyleSheet.create({
     color: "rgba(239,239,239,1)",
     width: 193,
     left: "26.3%",
-    top: "32.31%"
+    top: "32.31%",
+    lineHeight: 32,
+    letterSpacing: 0
   },
   image2: {
     top: 117,
