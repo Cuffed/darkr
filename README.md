@@ -9,4 +9,6 @@ A React Native Dating App template by Cuffed. Uses modern design elements.
   <img src="renders/dec-11/OnboardingAge.png" alt="Onboarding - Specify age">
   <img src="renders/dec-11/OnboardingTooYoung.png" alt="Onboarding - Too young!">
   <img src="renders/dec-11/OnboardingLocation.png" alt="Onboarding - Location">
+  <img src="renders/dec-12/ProfileEditor.png" alt="Profile - Editor">
+  <img src="renders/dec-12/Matchmaking.png" alt="Matchmaking">
 </p>
