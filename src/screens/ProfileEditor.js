@@ -90,14 +90,16 @@ const styles = StyleSheet.create({
   list: {
     top: 127,
     left: "2.93%",
-    width: "97.06666666666666%",
-    height: 224,
+    width: "97.07%",
+    height: 240,
     position: "absolute"
   },
   rect5: {
     width: 156,
     height: 224,
-    marginRight: 13
+    marginRight: 8,
+    marginLeft: 13,
+    marginTop: 8
   },
   rect6: {
     top: 0,
