@@ -10,7 +10,9 @@
         "/src/screens/Matchmaking.js"
     ],
     "symbols": [
-        "/src/symbols/Button.js"
+        "/src/symbols/Button.js",
+        "/src/symbols/EditorField.js",
+        "/src/symbols/EditorLargeField.js"
     ],
     "assets": [],
     "defaultArtboardDirectory": "/src/screens",

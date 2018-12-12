@@ -2,13 +2,16 @@ import React, { Component } from "react";
 import { Center } from "@builderx/utils";
 import Icon from "@builderx/icons";
 
+import EditorField from "../symbols/EditorField";
+import EditorLargeField from "../symbols/EditorLargeField";
+
 import {
   View,
   StyleSheet,
   Image,
-  FlatList,
   Text,
-  TextInput
+  ScrollView,
+  FlatList
 } from "react-native";
 
 export default class ProfileEditor extends Component {
@@ -21,47 +24,44 @@ export default class ProfileEditor extends Component {
           source={require("../assets/Asset_60.png")}
           resizeMode="repeat"
         />
-        <FlatList
-          style={styles.list}
-          data={[0, 0, 0]}
-          renderItem={({ item, separators }) => {
-            return (
-              <View style={styles.rect5}>
-                <View style={styles.rect6} />
-              </View>
-            );
-          }}
-          horizontal={true}
-        />
         <Center horizontal>
           <Text style={styles.text}>Edit Profile</Text>
         </Center>
         <Icon style={styles.icon} name="check" type="MaterialCommunityIcons" />
-        <Center vertical>
-          <View style={styles.rect7} />
-        </Center>
-        <Center>
-          <TextInput
-            style={styles.textInput}
-            placeholder="My name is..."
-            placeholderTextColor="rgba(104,106,162,1)"
-            autoCapitalize="words"
-            selectionColor="rgba(108,99,255,1)"
+        <ScrollView
+          style={styles.scrollArea}
+          horizontal={false}
+          contentContainerStyle={styles.ScrollView1}
+        >
+          <FlatList
+            style={styles.list}
+            renderItem={({ item, separators }) => {
+              return (
+                <View style={styles.rect2}>
+                  <View style={styles.rect3} />
+                </View>
+              );
+            }}
+            horizontal={true}
           />
-        </Center>
-        <View style={styles.rect8} />
-        <Center horizontal>
-          <TextInput
-            style={styles.textInput2}
-            placeholder="Who am I?"
-            placeholderTextColor="rgba(104,106,162,1)"
-            autoCapitalize="words"
-            multiline={true}
-            selectionColor="rgba(108,99,255,1)"
-            numberOfLines={16}
-            keyboardType="default"
+          <EditorField style={styles.editorField} />
+          <EditorLargeField style={styles.editorLargeField} />
+          <EditorField
+            style={styles.editorField2}
+            textInput="I'm a"
+            text3="Job Title"
           />
-        </Center>
+          <EditorField
+            style={styles.editorField3}
+            textInput="I work at "
+            text3="Company"
+          />
+          <EditorField
+            style={styles.editorField4}
+            textInput="I study/studied at"
+            text3="Education"
+          />
+        </ScrollView>
       </View>
     );
   }
@@ -87,40 +87,9 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     position: "absolute",
-    opacity: 0.3
+    opacity: 0.1
   },
-  list: {
-    top: 118,
-    left: "2.93%",
-    width: "97.07%",
-    height: 240,
-    position: "absolute"
-  },
-  rect5: {
-    width: 156,
-    height: 224,
-    marginRight: 0,
-    marginLeft: 8,
-    marginTop: 8
-  },
-  rect6: {
-    top: 0,
-    left: 0,
-    width: 156,
-    height: 224,
-    position: "absolute",
-    elevation: 15,
-    backgroundColor: "rgba(255,255,255,1)",
-    opacity: 1,
-    borderRadius: 10,
-    shadowColor: "rgba(0,0,0,1)",
-    shadowOffset: {
-      width: 0,
-      height: 0
-    },
-    shadowOpacity: 0.37,
-    shadowRadius: 5
-  },
+
   text: {
     top: 58,
     width: 154,
@@ -142,46 +111,83 @@ const styles = StyleSheet.create({
     color: "rgba(255,255,255,1)",
     fontSize: 40
   },
-  rect7: {
-    left: 0,
-    right: 0,
-    height: 63,
-    position: "absolute",
-    backgroundColor: "rgba(255,255,255,1)",
-    opacity: 1
-  },
-  textInput: {
-    width: 318,
-    height: 36,
-    position: "absolute",
-    fontSize: 20,
-    fontFamily: "Catamaran-Black",
-    lineHeight: 30,
-    letterSpacing: 0,
-    textAlign: "left",
-    color: "rgba(23,25,65,1)"
-  },
-  rect8: {
-    top: 459,
-    left: 0,
-    right: 0,
-    height: "32.02%",
-    position: "absolute",
-    backgroundColor: "rgba(255,255,255,1)",
-    opacity: 1
-  },
-  textInput2: {
-    top: "57.64%",
 
-    width: 323,
-    textAlignVertical: "top",
+  scrollArea: {
+    top: 118,
+    left: 0,
+    right: -1,
+    height: 900,
+    position: "absolute"
+  },
+  list: {
+    top: 0,
+    left: "2.93%",
+    width: "97.07%",
+    height: 240,
+    position: "absolute"
+  },
+  rect2: {
+    width: 156,
+    height: 224,
+    marginTop: 8,
+    marginRight: 0,
+    marginLeft: 8
+  },
+  rect3: {
+    top: 0,
+    left: 0,
+    width: 156,
+    height: 224,
     position: "absolute",
-    fontSize: 20,
-    fontFamily: "Catamaran-Black",
-    lineHeight: 30,
-    letterSpacing: 0,
-    textAlign: "left",
-    color: "rgba(23,25,65,1)",
-    bottom: 93
+    elevation: 15,
+    backgroundColor: "rgba(255,255,255,1)",
+    opacity: 1,
+    borderRadius: 10,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 0,
+      height: 0
+    },
+    shadowOpacity: 0.37,
+    shadowRadius: 5
+  },
+  editorField: {
+    top: 265,
+    left: 0,
+    right: 0,
+    height: 76,
+    position: "absolute"
+  },
+  editorLargeField: {
+    top: 341,
+    left: 0,
+    right: 2,
+    height: 434.18,
+    position: "absolute"
+  },
+  editorField2: {
+    top: "72.76%",
+    left: 0,
+    right: 0,
+    height: 78,
+    position: "absolute"
+  },
+  ScrollView1: {
+    width: 377,
+    height: 1116
+  },
+  editorField3: {
+    top: "82.97%",
+    left: 0,
+    right: 0,
+    height: 75,
+    position: "absolute"
+  },
+  editorField4: {
+    top: "92.83%",
+    left: 0,
+    right: 0,
+    height: 75,
+    position: "absolute"
   }
 });

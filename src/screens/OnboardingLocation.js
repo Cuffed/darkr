@@ -14,9 +14,11 @@ export default class OnboardingLocation extends Component {
           source={require("../assets/Asset_50.png")}
           resizeMode="repeat"
         />
-        <Text style={styles.text} numberOfLines={3}>
-          We need your location to match you!
-        </Text>
+        <Center horizontal>
+          <Text style={styles.text} numberOfLines={3}>
+            We need your location to match you!
+          </Text>
+        </Center>
         <Icon
           style={styles.icon}
           name="keyboard-backspace"
@@ -60,12 +62,12 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     position: "absolute",
-    opacity: 0.15
+    opacity: 0.1
   },
   text: {
     top: 344,
-    left: "8%",
-    width: "84%",
+
+    width: 315,
     height: 154,
     position: "absolute",
     backgroundColor: "transparent",
