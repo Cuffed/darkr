@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Center } from "@builderx/utils";
 import Icon from "@builderx/icons";
 
-import { View, StyleSheet, Image, Text, TextInput } from "react-native";
+import { View, StyleSheet, Image, Text } from "react-native";
 
 export default class OnboardingAge extends Component {
   render() {
@@ -22,17 +22,6 @@ export default class OnboardingAge extends Component {
           name="keyboard-backspace"
           type="MaterialCommunityIcons"
         />
-        <Center horizontal>
-          <TextInput
-            style={styles.textInput}
-            placeholder="##"
-            placeholderTextColor="rgba(23,25,65,1)"
-            keyboardType="numeric"
-            maxLength={2}
-            selectionColor="rgba(102,204,102,0.2)"
-            keyboardAppearance="light"
-          />
-        </Center>
       </View>
     );
   }
@@ -77,15 +66,5 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     color: "rgba(255,255,255,1)",
     fontSize: 40
-  },
-  textInput: {
-    top: 216,
-    width: 209,
-    height: 145,
-    position: "absolute",
-    fontSize: 100,
-    fontFamily: "Catamaran-Black",
-    textAlign: "center",
-    color: "rgba(23,25,65,1)"
   }
 });

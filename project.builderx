@@ -12,7 +12,7 @@
         "/src/screens/Profile.js",
         "/src/screens/Chat.js",
         "/src/screens/ProfileInfo.js",
-        "/src/screens/Untitled1.js"
+        "/src/screens/Settings.js"
     ],
     "symbols": [
         "/src/symbols/Button.js",

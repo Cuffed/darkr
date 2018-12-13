@@ -26,21 +26,17 @@ export default class ProfileInfo extends Component {
         <ScrollView
           style={styles.scrollArea}
           horizontal={false}
-          contentContainerStyle={{
-            width: 375,
-            height: 812
-          }}
+          contentContainerStyle={styles.ScrollView1}
         >
           <Text style={styles.text} selectable={false} numberOfLines={13}>
-            \n \n \n \n Hi, I'm Danaerys, the rightful ruler of Westeros and
-            a\n\n Khaleesi\n from\n over yonder! I like fire, dragons, and
-            razing my\n\n enemies\n until all\n that remains is the ash of their
-            bones! At\n\n nights you\n can catch me\n at the dungeons or with
-            literally any\n\n guy except for\n Jorah (fuck\n Jorah). If you want
-            to slide into\n my\n DMs, please have\n a really nice\n ass like Jon
-            Snow's. We can\n fuck\n on my boat, or one\n of my boats, cuz\n I've
-            got like fifty.\n My ex\n was Khal Drogo so you\n better be large
-            in\n many ways, if\n you catch\n my drift!\n{" "}
+            Hi, I'm Danaerys, the rightful ruler of Westeros and a Khaleesi from
+            over yonder! I like fire, dragons, and razing my enemies until all
+            that remains is the ash of their bones! At nights you can catch me
+            at the dungeons or with literally any guy except for Jorah (fuck
+            Jorah). If you want to slide into my DMs, please have a really nice
+            ass like Jon Snow's. We can fuck on my boat, or one of my boats, cuz
+            I've got like fifty. My ex was Khal Drogo so you better be large in
+            many ways, if you catch my drift!
           </Text>
           <Swiper
             style={styles.carousel}
@@ -73,7 +69,7 @@ export default class ProfileInfo extends Component {
           <View style={styles.rect4}>
             <Text style={styles.text2}>Danaerys T., 18</Text>
             <Text style={styles.text3} selectable={false}>
-              \n \n \n \n \n Mhysa\n{" "}
+              Mhysa
             </Text>
           </View>
         </ScrollView>
@@ -163,23 +159,23 @@ const styles = StyleSheet.create({
     height: "100%"
   },
   text: {
-    top: 549,
-    left: "5.87%",
-    width: "88%",
-    height: 263,
+    top: 551,
+    width: "88.26666666666667%",
+    height: 395,
     position: "absolute",
     backgroundColor: "transparent",
     fontSize: 17,
     fontFamily: "Catamaran-Medium",
     lineHeight: 21,
-    letterSpacing: 0
+    letterSpacing: 0,
+    left: 22.01
   },
   carousel: {
     top: 0,
     left: 0,
-    width: "100%",
     height: 464,
-    position: "absolute"
+    position: "absolute",
+    width: "100%"
   },
   rect: {
     flex: 1,
@@ -250,5 +246,9 @@ const styles = StyleSheet.create({
     height: "100%",
     position: "absolute",
     opacity: 0.1
+  },
+  ScrollView1: {
+    width: "100%",
+    height: 947
   }
 });
