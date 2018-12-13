@@ -10,7 +10,9 @@
         "/src/screens/Matchmaking.js",
         "/src/screens/ProfileEditorSave.js",
         "/src/screens/Profile.js",
-        "/src/screens/Chat.js"
+        "/src/screens/Chat.js",
+        "/src/screens/ProfileInfo.js",
+        "/src/screens/Untitled1.js"
     ],
     "symbols": [
         "/src/symbols/Button.js",
