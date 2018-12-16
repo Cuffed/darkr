@@ -1,5 +1,25 @@
 {
   "expo": {
-    "sdkVersion": "31.0.0"
+    "name": "Cuffed",
+    "icon": "./icon.png",
+    "version": "0.3.0",
+    "slug": "cuffed-date",
+    "sdkVersion": "31.0.0",
+    "ios": {
+      "bundleIdentifier": "com.cuffed.date",
+      "publishBundlePath": "ios/cuffed/Supporting/shell-app.bundle",
+      "publishManifestPath": "ios/cuffed/Supporting/shell-app-manifest.json"
+    },
+    "android": {
+      "package": "com.cuffed.date",
+      "publishBundlePath": "android/app/src/main/assets/shell-app.bundle",
+      "publishManifestPath": "android/app/src/main/assets/shell-app-manifest.json"
+    },
+    "isDetached": true,
+    "detach": {
+      "iosExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/ios-v2.9.0-sdk31.0.0-250a3991-b623-4f9c-b07f-0b9ed7e8c4c9.tar.gz",
+      "androidExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/android-v2.9.2-sdk31.0.0-d1776f37-d524-4fee-872d-6807b0fd83ff.tar.gz"
+    },
+    "scheme": "exp93030fa069434fbf9653e17f499c050f"
   }
 }

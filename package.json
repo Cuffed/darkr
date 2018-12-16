@@ -20,14 +20,15 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "expo": "31.0.0",
-    "react": "16.5.0",
-    "lodash": "^4.17.4",
-    "react-native": "0.57.1",
-    "react-navigation": "1.2.1",
-    "@builderx/tab-view": "^0.1.5",
     "@builderx/icons": "^0.1.5",
+    "@builderx/react-native-swiper": "^0.1.5",
+    "@builderx/tab-view": "^0.1.5",
     "@builderx/utils": "^0.1.6",
-    "@builderx/react-native-swiper": "^0.1.5"
+    "expo": "31.0.0",
+    "expokit": "^31.0.2",
+    "lodash": "^4.17.4",
+    "react": "16.5.0",
+    "react-native": "0.57.1",
+    "react-navigation": "1.2.1"
   }
 }
